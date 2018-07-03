@@ -43,6 +43,13 @@ The Nginx Ingress Controller is an Ingress controller that uses a ConfigMap to s
     helm install --name ingress stable/nginx-ingress --namespace kube-system
     ```
 
+    > Note: If above command fails with "Error: release ingress failed: clusterroles.rbac.authorization.k8s.io "ingress-nginx-ingress" is forbidden:.." then run the following command instead. This bug is noted at: https://github.com/rbitia/aci-demos/issues/74
+    
+    ``` bash
+    helm install stable/nginx-ingress --name ingress --namespace kube-system --set rbac.create=false --set     rbac.createRole=false --set rbac.createClusterRole=false
+    ```
+
+
 2. Validate that Nginx was installed
     
     ``` bash
