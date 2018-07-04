@@ -177,7 +177,7 @@ In our earlier labs, we had to create a Dockerfile for the web app. Since you fo
 1. Get a URL for your Brigade Gateway
 
     ```
-    kubectl get service brigade-brigade-gw
+    kubectl get service brigade-brigade-github-gw 
 
     NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)          AGE
     brigade-brigade-gw   LoadBalancer   10.0.45.233   13.67.129.228   7744:30176/TCP   4h
