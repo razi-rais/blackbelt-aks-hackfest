@@ -35,6 +35,10 @@ mongoose.connect(process.env.MONGODB_URI, connectOptions, function(error){
   if(!error){
     console.dir('CONNECTED TO ' + process.env.MONGODB_URI);
   }
+  else 
+  {
+    console.dir('ERROR: ' + error);
+  }
 });
 
 var mongo = require('./routes/mongo');
